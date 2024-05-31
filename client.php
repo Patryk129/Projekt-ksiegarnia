@@ -14,7 +14,7 @@ require 'admin.php';
     <?php require 'header4.php'?>
     <aside>
         <a href="client.php"><button class="menu">Zarządzaj klientami</button></a>
-        <a href="ksiazka.php"><button class="menu">Zarządzaj książkami</button></a>
+        <a href="book.php"><button class="menu">Zarządzaj książkami</button></a>
     </aside>
     <main class="main-left">
         <a href="addclient.php"><button id="ad">Dodaj klienta</button></a>
