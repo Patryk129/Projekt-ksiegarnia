@@ -30,7 +30,7 @@ if(isset($_SESSION['log']))
                 $_SESSION['log'] = $row[0];
                 if($row[0] == 1)
                 {
-                    header('location: klient.php');
+                    header('location: client.php');
                     exit();
                 }   
                 else
