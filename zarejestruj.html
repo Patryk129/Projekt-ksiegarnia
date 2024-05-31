@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+                width: 100%;
+                margin: auto;
+                overflow: hidden;
+                }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            /* margin-left: 950px;*/
+            float:right;
+            margin-top: 2%;
+            margin-right: 5%;
+            color:#0779e4;
+        }
+
+        header h1 {
+            float: left;
+            width: 600px;
+            /* margin-top:0px; */
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Księgarnia Internetowa</h1>
+            <a href="index.php">Powrót</a>
+        </div>
+    </header>
+    <div>
+        require 'header3.php';
+        <form action="zarejestruj.php" method="post">
+            <div id="rejestracja"><b>Rejestracja</b></div></br>
+            <b>Imie:</br>
+            <input type=text name="imie" value="" size="25" required><br/>
+            Nazwisko:</br>
+            <input type=text name="nazwisko" value="" size="25" required><br/>
+            Email:</br>
+            <input type=email name="email" value="" size="25" required><br/>
+            Haslo: </br>
+            <input type=password name='haslo' value="" size="25" required><br/>
+            Miejscowość: </br>
+            <input type=text name='miejscowosc' value="" size="25" required><br/>
+            Ulica: </br>
+            <input type=text name='ulica' value="" size="6" required><br/>
+            Numer domu: </br>
+            <input type=number name='nr_domu' value="" size="5" required><br/>
+            Telefon: </b></br>
+            <input type=text name='telefon' value="" size="9" required><br/>
+            <input type="submit" value="Zarejestruj sie">
+        </form>
+    </div>
+</body>
+</html>

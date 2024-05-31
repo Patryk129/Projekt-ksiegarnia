@@ -1,0 +1,70 @@
+<?php
+session_start();
+if($_SESSION['log']!='admin')
+{
+    header('location: startowa.html');
+    exit;
+}
+if(isset($_POST['id_ksiazki']))
+$conn = mysqli_connect('localhost', 'root', '', 'ksiegarnia');
+
+if ($conn == FALSE) 
+{
+    die("Błąd połączenia z bazą danych: ");
+}
+$id_ksiazki = $_POST['id_ksiazki'];
+$tytul = $_POST['tytul'];
+$id_autora = $_POST['id_autora'];
+$cena = $_POST['cena'];
+$ilosc = $_POST['ilosc']; 
+$wydawnictwo = $_POST['wydawnictwo'];
+$jezyk = $_POST['jezyk_ksiazki'];
+$rok = $_POST['rok_wydania'];
+$opis = $_POST['opis'];
+if($_POST['ksiazka']== 'dodaj')
+{
+    $query = "INSERT INTO ksiazki(tytul,id_autora,cena,Ilosc,wydawnictwo,jezyk_ksiazki,rok_wydania,opis) VALUES('$tytul','$id_autora','$cena','$ilosc','$wydawnictwo','$jezyk','$rok','$opis')";
+    $result = mysqli_query($conn,$query);
+}
+else
+{
+    $query= "DELETE FROM ksiazki WHERE id_ksiazki = '$id_ksiazki'";
+    $result = mysqli_query($conn,$query);
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="ksiazka.php" method="post">
+            <select id="ksiazka" name="ksiazka">
+            <option value="dodaj">dodaj</option>
+            <option value="usun">usun</option>
+            </select></br></br>
+            <b>Id ksiazki:</b></br>
+            <input type=number name="id_ksiazki" value=""><br/>
+            <b>Tytuł:</b></br>
+            <input type=text name="tytul" value="" size="25"><br/>
+            <b>Id autora:</b></br>
+            <input type=text name="id_autora" value="" size="25"><br/>
+            <b>Cena:</b></br>
+            <input type=number name="cena" value=""><br/>
+            <b>ilosc: </b></br>
+            <input type=number name='ilosc' value=""><br/>
+            <b>Wydawnictwo: </b></br>
+            <input type=text name='wydawnictwo' value="" size="25"><br/>
+            <b>Jezyk: </b></br>
+            <input type=text name='jezyk_ksiazki' value="" size="25"><br/>
+            <b>Rok wydania: </b></br>
+            <input type=number name='rok_wydania' value=""><br/>
+            <b>Opis: </b></br>
+            <input type=text name='opis' value="" size="255"><br/>
+            <input type="submit" >
+</form>
+</body>
+</html>

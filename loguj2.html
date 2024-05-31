@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        form{
+            border: 5px solid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* padding: 10px; */
+            height: 55%;
+            width: 30%;
+        }
+        #logowanie{
+            /* margin-left: 35%; */
+            text-align: center;
+            /* margin-bottom: 5%;  */
+            font-size: xx-large; 
+        } 
+        div{
+            float: left;
+            width: 100%;
+            height: 16%;
+            /* margin: 1%; */
+        }
+        input{
+            width: 90%;
+            height: 90%;
+            margin-left: 5%;
+        }
+        input[type=submit]{
+            margin-left: 6%;
+        }
+        .nazw{
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="loguj2.php" method="post">
+            <div id="logowanie">Logowanie</div>
+            <div class="nazw">Email:</div>
+            <div><input type=text name="email" value="" size="25"></div>
+            <div class="nazw">Hasło: </div>
+            <div><input type=haslo name='haslo' value="" size="25"></div>
+            <div><input type="submit" value="Zaloguj sie"></div>
+        </form>
+    </div>
+</body>
+</html>
