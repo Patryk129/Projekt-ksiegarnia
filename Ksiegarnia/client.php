@@ -50,7 +50,7 @@ require 'admin.php';
             echo '<td>' .  $row['Nr_domu']. '</td>';
             echo '<td><form method="POST" action="removeklient.php">
                     <input type="hidden" name="id_klienta" value="' . $row["Id_klienta"] . '">
-                    <button type="submit" name="usun" id="usun">-</button></td>';
+                    <button type="submit" name="usun" id="usun">-</button></td></form>';
             echo '</tr>';
         }
         mysqli_close($conn);
