@@ -5,6 +5,6 @@
     $query= "DELETE FROM klient WHERE id_klienta = '$id' ";
     $result = mysqli_query($conn,$query);
     mysqli_close($conn);
-    header('location: klient.php');
+    header('location: client.php');
     exit;
 ?>
