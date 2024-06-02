@@ -41,7 +41,7 @@ require 'admin.php';
             echo '<td>' .  $row['ilosc']. '</td>';
             echo '<td><form method="POST" action="removebook.php">
                     <input type="hidden" name="id_ksiazki" value="' . $row["id_ksiazki"] . '">
-                    <button type="submit" name="usun" id="usun">-</button></td>';
+                    <button type="submit" name="usun" id="usun">-</button></td></form>';
             echo '</tr>';
         }
         mysqli_close($conn);
