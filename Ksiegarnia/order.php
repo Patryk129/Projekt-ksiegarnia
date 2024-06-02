@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['log']))
 {
-    header('location:startowa.html');
+    header('location:index.php');
     exit();
 }
 require 'connect.php';
