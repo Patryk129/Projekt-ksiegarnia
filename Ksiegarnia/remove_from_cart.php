@@ -29,6 +29,6 @@ else
     $query = "UPDATE zamowione_produkty set liczba_egz = $legz WHERE id_zamowienia = $zam AND id_produktu = $id_ksiazki";
     $result = mysqli_query($conn,$query);
 }
-header("Location: zamowienie.php");
+header("Location: order.php");
 exit();
 ?>
